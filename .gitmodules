@@ -1,0 +1,3 @@
+[submodule "web-app/frontend"]
+	path = web-app/frontend
+	url = https://github.com/edwin-ma26/tab-tracker-frontend.git
