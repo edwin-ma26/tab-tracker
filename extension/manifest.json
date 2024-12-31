@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Productivity Tracker",
+  "version": "1.0",
+  "permissions": ["tabs", "activeTab", "scripting"],
+  "host_permissions": [
+    "*://www.youtube.com/*",
+    "*://chat.openai.com/*",
+    "*://www.google.com/*",
+    "*://www.bing.com/*",
+    "*://www.amazon.com/*",
+    "*://www.quora.com/*",
+    "*://discord.com/*",
+    "*://twitter.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.youtube.com/*",
+        "*://chat.openai.com/*",
+        "*://www.google.com/*",
+        "*://www.bing.com/*",
+        "*://www.amazon.com/*",
+        "*://www.quora.com/*",
+        "*://discord.com/*",
+        "*://twitter.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,12 @@
+# Normalize line endings
+* text=auto
+
+# Force LF for specific file types
+*.js text eol=lf
+*.json text eol=lf
+*.sh text eol=lf
+
+# Binary files (Git should not alter these)
+*.png binary
+*.jpg binary
+*.gif binary
